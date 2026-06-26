@@ -21,7 +21,7 @@ for piece in pieces:
   piece_img = pygame.transform.scale(piece_img, (100,100))
   game_state.parts[piece] = piece_img
 
-game_state.draw_pieces(screen)
+
 
 def background():
   image = pygame.image.load('assets/board.png').convert_alpha()
@@ -32,10 +32,10 @@ def background():
 
 def main():
   
-  run = True
-
+  run = True  
   background()
-
+  game_state.draw_pieces(screen)
+  pygame.display.flip()
   while run:
     for event in pygame.event.get():
       if event.type == pygame.QUIT:

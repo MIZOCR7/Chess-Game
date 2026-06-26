@@ -25,9 +25,15 @@ class Engine():
     return box_width, box_height 
 
   def draw_pieces(self, screen):
-    index = 0
-    for data in self.data[index]:
-      print(data)
-      index += 1 
+    index = 0 
+    for x in range(8):
+      for y in range(8):
+        piece = self.data[y][x]
+        if piece != "--":
+          image = pygame.image.load(f"assets/{piece}.png")
+          image = pygame.transform.scale(image, (100, 100))
+          screen.blit(image, (x * 100, y * 100))
+          pygame.display.update()
+        
 
 
