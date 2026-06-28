@@ -24,7 +24,7 @@ for piece in pieces:
 
 
 def background():
-  image = pygame.image.load('assets/board.png').convert_alpha()
+  image = pygame.image.load('assets/Board.png').convert_alpha()
   image = pygame.transform.scale(image, (WIDTH,HEIGHT))
   screen.blit(image, (0,0)) 
 
